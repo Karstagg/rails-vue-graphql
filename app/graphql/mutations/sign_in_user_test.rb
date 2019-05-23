@@ -7,20 +7,20 @@ class Mutations::SignInUserTest < ActiveSupport::TestCase
 
   def create_user
     User.create!(
-      name: 'Test User',
-      email: 'email@example.com',
-      password: '[omitted]',
-    )
+        name: 'Test User',
+        email: 'email@example.com',
+        password: '[omitted]',
+        )
   end
 
   test 'success' do
     user = create_user
 
     result = perform(
-      email: {
-        email: user.email,
-        password: user.password
-      }
+        email: {
+            email: user.email,
+            password: user.password
+        }
     )
 
     assert result[:token].present?

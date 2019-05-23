@@ -4,6 +4,7 @@ module Types
     field :name, String, null: false
     # we are exposing `email` just for tutorial purposes
     # in real application shouldn't leak user emails
+    # todo fix this
     field :email, String, null: false
   end
 end

@@ -9,9 +9,9 @@ module Mutations
 
     def resolve(description: nil, url: nil)
       Link.create!(
-        description: description,
-        url: url,
-      )
+          description: description,
+          url: url,
+          )
     end
   end
 end

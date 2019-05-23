@@ -13,9 +13,9 @@ module Mutations
 
     def resolve(name: nil, auth_provider: nil)
       User.create!(
-        name: name,
-        email: auth_provider&.[](:email)&.[](:email),
-        password: auth_provider&.[](:email)&.[](:password)
+          name: name,
+          email: auth_provider&.[](:email)&.[](:email),
+          password: auth_provider&.[](:email)&.[](:password)
       )
     end
   end
